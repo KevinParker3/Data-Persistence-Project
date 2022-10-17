@@ -13,7 +13,8 @@ public class UIMenuHandler : MonoBehaviour
 
     private void Awake()
     {
-        highScoreText.text = "Best Score : " + GameManager.Instance.highScorePlayerName + " " + GameManager.Instance.currentHighScore;
+        if(GameManager.Instance != null)
+            highScoreText.text = "Best Score : " + GameManager.Instance.highScorePlayerName + " " + GameManager.Instance.currentHighScore;
     }
 
     public void StartButtonClicked()
